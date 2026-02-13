@@ -1,0 +1,25 @@
+import random
+
+randomnumber=random.randint(1,100)
+count=0
+
+while True:
+    guess=input("guess a number between 1 and 100")
+    if not guess.isdigit():
+        print("please enter a   number")
+        continue
+    guess=int(guess)
+    if guess==randomnumber:
+        print("right")
+        count+=1
+        print("you got it in ",count,"th try")
+        break
+    elif guess<randomnumber:
+        print("low ")
+        count+=1
+    else:
+        print("high")
+        count+=1
+
+
+
